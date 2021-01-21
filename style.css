@@ -106,9 +106,9 @@ nav a {
     text-align: center;
   }
 
-  /* nav ul li:hover {
+  nav ul li:hover {
     border-color: hotpink; /* Would delete this because of animation */
-  } */
+  }
 
   section {
     margin: 0.5rem;
@@ -171,19 +171,17 @@ nav a {
 /* animate images to scale up */
 img{
   transition-property: all;
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
 }
 
 img:hover {
   transform: scale(1.1);
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 /* first image of the gallery scales less than the rest */
 .gallery img:first-of-type:hover { 
   transform: scale(1.05);
-  transition-duration: 1s;
-  
 }
 
 /* nav border hover animation */
@@ -200,5 +198,21 @@ nav li:hover {
   border-right: 5px hotpink solid;
   border-top: 5px hotpink solid;
   border-left: 5px hotpink solid;
+}
 
+/* background image animation */
+body {
+  animation-name: back-image-move;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes back-image-move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 412px 0;
+  }
 }
